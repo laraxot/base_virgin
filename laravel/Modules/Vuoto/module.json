@@ -1,0 +1,13 @@
+{
+    "name": "Vuoto",
+    "alias": "vuoto",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Vuoto\\Providers\\VuotoServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
