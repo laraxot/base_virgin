@@ -44,9 +44,9 @@
 [submodule "laravel/Themes/BsItalia"]
 	path = laravel/Themes/BsItalia
 	url = https://github.com/laraxot/theme_bsitalia.git
-[submodule "laravel/Themes/AdminLTE"]
-	path = laravel/Themes/AdminLTE
-	url = https://github.com/laraxot/theme_adminlte.git
 [submodule "laravel/Modules/Lang"]
 	path = laravel/Modules/Lang
 	url = https://github.com/laraxot/module_lang.git
+[submodule "laravel/Themes/AdminLTE"]
+	path = laravel/Themes/AdminLTE
+	url = https://github.com/laraxot/theme_adminlte.git
