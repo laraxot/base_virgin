@@ -10,5 +10,8 @@
     },
     "[json]": {
       "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[blade]": {
+      "editor.defaultFormatter": "shufo.vscode-blade-formatter"
     }
 }
