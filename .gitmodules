@@ -6,6 +6,7 @@
 	path = bashscripts
 	url = https://github.com/laraxot/bashscripts.git
 
+#modules
 [submodule "laravel/Modules/Blog"]
 	path = laravel/Modules/Blog
 	url = https://github.com/laraxot/module_blog.git
@@ -21,20 +22,11 @@
 [submodule "laravel/Modules/Geo"]
 	path = laravel/Modules/Geo
 	url = https://github.com/laraxot/module_geo.git
-[submodule "laravel/Modules/FormX"]
-	path = laravel/Modules/FormX
-	url = https://github.com/laraxot/module_formx.git
 [submodule "laravel/Modules/Tenant"]
 	path = laravel/Modules/Tenant
 	url = https://github.com/laraxot/module_tenant.git
 
-	
-[submodule "laravel/Themes/SbAdmin2Bs4"]
-	path = laravel/Themes/SbAdmin2Bs4
-	url = https://github.com/laraxot/theme_sbadmin2bs4.git
-[submodule "laravel/Themes/DirectoryBs4"]
-	path = laravel/Themes/DirectoryBs4
-	url = https://bitbucket.org/team_xot/theme_directorybs4.git
+#themes
 [submodule "laravel/Modules/Rating"]
 	path = laravel/Modules/Rating
 	url = https://github.com/laraxot/module_rating.git
