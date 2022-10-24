@@ -25,11 +25,20 @@
 [submodule "laravel/Modules/Tenant"]
 	path = laravel/Modules/Tenant
 	url = https://github.com/laraxot/module_tenant.git
-
-#themes
 [submodule "laravel/Modules/Rating"]
 	path = laravel/Modules/Rating
 	url = https://github.com/laraxot/module_rating.git
 [submodule "laravel/Modules/Tag"]
 	path = laravel/Modules/Tag
 	url = https://github.com/laraxot/module_tag.git
+[submodule "laravel/Modules/Ticket"]
+	path = laravel/Modules/Ticket
+	url = https://github.com/laraxot/module_ticket.git
+
+#themes
+[submodule "laravel/Themes/BsItalia"]
+	path = laravel/Themes/BsItalia
+	url = https://github.com/laraxot/theme_bsitalia.git
+[submodule "laravel/Themes/AdminLTE"]
+	path = laravel/Themes/AdminLTE
+	url = https://github.com/laraxot/theme_adminlte.git
