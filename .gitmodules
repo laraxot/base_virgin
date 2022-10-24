@@ -42,3 +42,6 @@
 [submodule "laravel/Themes/AdminLTE"]
 	path = laravel/Themes/AdminLTE
 	url = https://github.com/laraxot/theme_adminlte.git
+[submodule "laravel/Modules/Cms"]
+	path = laravel/Modules/Cms
+	url = https://github.com/laraxot/module_cms.git
