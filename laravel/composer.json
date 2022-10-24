@@ -27,6 +27,9 @@
         "spatie/laravel-cookie-consent": "*",
         "spatie/laravel-dashboard": "*",
         "spatie/laravel-dashboard-time-weather-tile": "*",
+        "spatie/laravel-permission": "*",
+        "spatie/laravel-queueable-action": "*",
+        "spatie/laravel-sitemap": "*",
         "staudenmeir/eloquent-has-many-deep": "^1.16",
         "symfony/dom-crawler": "^6.0",
         "unisharp/laravel-filemanager": "^2.5"

@@ -1,11 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
-use Modules\Tenant\Services\TenantService;
 use Nwidart\Modules\Activators\FileActivator;
+use Nwidart\Modules\Commands;
 
 return [
+
     /*
     |--------------------------------------------------------------------------
     | Module Namespace
@@ -28,7 +27,7 @@ return [
 
     'stubs' => [
         'enabled' => false,
-        'path' => base_path().'/vendor/nwidart/laravel-modules/src/Commands/stubs',
+        'path' => base_path('vendor/nwidart/laravel-modules/src/Commands/stubs'),
         'files' => [
             'routes/web' => 'Routes/web.php',
             'routes/api' => 'Routes/api.php',
@@ -128,7 +127,7 @@ return [
             'notifications' => ['path' => 'Notifications', 'generate' => false],
             'resource' => ['path' => 'Transformers', 'generate' => false],
             'component-view' => ['path' => 'Resources/views/components', 'generate' => false],
-            'component-class' => ['path' => 'View/Component', 'generate' => false],
+            'component-class' => ['path' => 'View/Components', 'generate' => false],
         ],
     ],
 
@@ -143,47 +142,49 @@ return [
     |
     */
     'commands' => [
-        CommandMakeCommand::class,
-        ControllerMakeCommand::class,
-        DisableCommand::class,
-        DumpCommand::class,
-        EnableCommand::class,
-        EventMakeCommand::class,
-        JobMakeCommand::class,
-        ListenerMakeCommand::class,
-        MailMakeCommand::class,
-        MiddlewareMakeCommand::class,
-        NotificationMakeCommand::class,
-        ProviderMakeCommand::class,
-        RouteProviderMakeCommand::class,
-        InstallCommand::class,
-        ListCommand::class,
-        ModuleDeleteCommand::class,
-        ModuleMakeCommand::class,
-        FactoryMakeCommand::class,
-        PolicyMakeCommand::class,
-        RequestMakeCommand::class,
-        RuleMakeCommand::class,
-        MigrateCommand::class,
-        MigrateRefreshCommand::class,
-        MigrateResetCommand::class,
-        MigrateRollbackCommand::class,
-        MigrateStatusCommand::class,
-        MigrationMakeCommand::class,
-        ModelMakeCommand::class,
-        PublishCommand::class,
-        PublishConfigurationCommand::class,
-        PublishMigrationCommand::class,
-        PublishTranslationCommand::class,
-        SeedCommand::class,
-        SeedMakeCommand::class,
-        SetupCommand::class,
-        UnUseCommand::class,
-        UpdateCommand::class,
-        UseCommand::class,
-        ResourceMakeCommand::class,
-        TestMakeCommand::class,
-        LaravelModulesV6Migrator::class,
+        Commands\CommandMakeCommand::class,
+        Commands\ComponentClassMakeCommand::class,
+        Commands\ComponentViewMakeCommand::class,
+        Commands\ControllerMakeCommand::class,
+        Commands\DisableCommand::class,
+        Commands\DumpCommand::class,
+        Commands\EnableCommand::class,
+        Commands\EventMakeCommand::class,
+        Commands\JobMakeCommand::class,
+        Commands\ListenerMakeCommand::class,
+        Commands\MailMakeCommand::class,
+        Commands\MiddlewareMakeCommand::class,
+        Commands\NotificationMakeCommand::class,
+        Commands\ProviderMakeCommand::class,
+        Commands\RouteProviderMakeCommand::class,
+        Commands\InstallCommand::class,
+        Commands\ListCommand::class,
+        Commands\ModuleDeleteCommand::class,
+        Commands\ModuleMakeCommand::class,
+        Commands\FactoryMakeCommand::class,
+        Commands\PolicyMakeCommand::class,
+        Commands\RequestMakeCommand::class,
+        Commands\RuleMakeCommand::class,
+        Commands\MigrateCommand::class,
+        Commands\MigrateRefreshCommand::class,
+        Commands\MigrateResetCommand::class,
+        Commands\MigrateRollbackCommand::class,
+        Commands\MigrateStatusCommand::class,
+        Commands\MigrationMakeCommand::class,
+        Commands\ModelMakeCommand::class,
+        Commands\PublishCommand::class,
+        Commands\PublishConfigurationCommand::class,
+        Commands\PublishMigrationCommand::class,
+        Commands\PublishTranslationCommand::class,
+        Commands\SeedCommand::class,
+        Commands\SeedMakeCommand::class,
+        Commands\SetupCommand::class,
+        Commands\UnUseCommand::class,
+        Commands\UpdateCommand::class,
+        Commands\UseCommand::class,
+        Commands\ResourceMakeCommand::class,
+        Commands\TestMakeCommand::class,
+        Commands\LaravelModulesV6Migrator::class,
     ],
 
     /*
@@ -217,9 +218,8 @@ return [
             'name' => 'Nicolas Widart',
             'email' => 'n.widart@gmail.com',
         ],
+        'composer-output' => false,
     ],
-
-    'composer-output' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -231,6 +231,7 @@ return [
     */
     'cache' => [
         'enabled' => false,
+        'driver' => 'file',
         'key' => 'laravel-modules',
         'lifetime' => 60,
     ],
@@ -243,7 +244,7 @@ return [
     */
     'register' => [
         'translations' => true,
-        /*
+        /**
          * load files on boot or register method
          *
          * Note: boot not compatible with asgardcms
@@ -265,8 +266,7 @@ return [
     'activators' => [
         'file' => [
             'class' => FileActivator::class,
-            //'statuses-file' => base_path('modules_statuses.json'),
-            'statuses-file' => TenantService::filePath('modules_statuses.json'),
+            'statuses-file' => base_path('modules_statuses.json'),
             'cache-key' => 'activator.installed',
             'cache-lifetime' => 604800,
         ],

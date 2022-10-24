@@ -1,6 +1,7 @@
 <?php
 
 return [
+
     /*
     |--------------------------------------------------------------------------
     | Name of route
@@ -31,7 +32,7 @@ return [
 
     'paths' => [
         public_path('upload'),
-        public_path('images'),
+        public_path('images')
     ],
 
     /*
@@ -66,4 +67,5 @@ return [
     */
 
     'lifetime' => 43200,
+
 ];
