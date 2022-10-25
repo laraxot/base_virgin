@@ -34,7 +34,13 @@
 [submodule "laravel/Modules/Ticket"]
 	path = laravel/Modules/Ticket
 	url = https://github.com/laraxot/module_ticket.git
-
+[submodule "laravel/Modules/Cms"]
+	path = laravel/Modules/Cms
+	url = https://github.com/laraxot/module_cms.git
+[submodule "laravel/Modules/Lang"]
+	path = laravel/Modules/Lang
+	url = https://github.com/laraxot/module_lang.git
+	
 #themes
 [submodule "laravel/Themes/BsItalia"]
 	path = laravel/Themes/BsItalia
@@ -42,6 +48,4 @@
 [submodule "laravel/Themes/AdminLTE"]
 	path = laravel/Themes/AdminLTE
 	url = https://github.com/laraxot/theme_adminlte.git
-[submodule "laravel/Modules/Cms"]
-	path = laravel/Modules/Cms
-	url = https://github.com/laraxot/module_cms.git
+
